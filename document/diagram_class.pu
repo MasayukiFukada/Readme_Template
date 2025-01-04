@@ -1,0 +1,26 @@
+@startuml
+class View {
+}
+metaclass ViewModel {
+}
+class Controller {
+}
+metaclass Model {
+}
+class Service {
+}
+class Repository {
+}
+metaclass Entity {
+}
+
+View <-down-> Controller
+Controller <-down-> Service
+Service <-down-> Repository
+View -right- ViewModel
+Controller -right- ViewModel
+Controller -right- Model
+Service -right- Model
+Service -right- Entity
+Repository -right- Entity
+@enduml
